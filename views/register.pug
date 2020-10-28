@@ -1,0 +1,29 @@
+extend layout
+
+block content
+    h2 Register Daniel's E-Learning with Node Js 
+    p #{title} and #{query}
+    form(method='POST', action='/users/register')
+      #form-group
+        label Name:
+        input.form-control(name='name',type='text')
+      #form-group
+        label Email:
+        input.form-control(name='email',type='email')
+      #form-group
+        label Username:
+        input.form-control(name='username', type='text')
+      #form-group
+        label Password:
+        input.form-control(name='password', type='password')
+      #form-group
+        label Confirm Password:
+        input.form-control(name='password2', type='password')
+      #form-group
+        label Sex:
+        select.form-control(name='sex', required='')
+          option(value='') Select Your Gender
+          option(value='Male') Male
+          option(value='Female') Female
+      br
+      input.btn.btn-primary(type='submit',value='Submit')
